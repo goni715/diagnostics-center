@@ -4,6 +4,7 @@ import authSliceReducer from "../features/auth/authSlice.js";
 import userSliceReducer from "../features/user/userSlice.js";
 import modalSliceReducer from "../features/modal/modalSlice.js";
 import {settingsSliceReducer} from "../features/settings/settingsSlice.js";
+import doctorSliceReducer from "../features/doctor/doctorSlice.js";
 
 
 const store = configureStore({
@@ -13,6 +14,7 @@ const store = configureStore({
         user: userSliceReducer,
         modal: modalSliceReducer,
         settings:settingsSliceReducer,
+        doctor: doctorSliceReducer
     },
     middleware: (getDefaultMiddleware)=>
         getDefaultMiddleware().concat(apiSlice.middleware)

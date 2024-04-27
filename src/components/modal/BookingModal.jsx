@@ -3,6 +3,7 @@ import {Modal} from "antd";
 import {useEffect, useState} from "react";
 import {Button, Spinner} from "@material-tailwind/react";
 import {SetBookingModalOpen} from "../../redux/features/modal/modalSlice.js";
+import {useCreateAppointmentMutation} from "../../redux/features/appointment/appointmentApi.js";
 
 
 
@@ -13,8 +14,9 @@ const BookingModal = () => {
     const [phone, setPhone] = useState("")
     const [age, setAge] = useState("")
     const [address, setAddress] = useState("")
-    //const [addTransaction, {isSuccess,isLoading}] = useAddTransactionMutation();
-    const isLoading = false;
+    const [createAppointment, {isSuccess,isLoading}] = useCreateAppointmentMutation();
+    const {doctorId} = useSelector(state=>state.doctor);
+
 
 
 
@@ -28,39 +30,36 @@ const BookingModal = () => {
     };
 
 
-    // useEffect(()=>{
-    //     if(isSuccess){
-    //         dispatch(SetTransactionCreateModalOpen(false));
-    //         setAmount("");
-    //         setType("");
-    //         setCategory("");
-    //         setDate("")
-    //         setReference("");
-    //         setDescription("")
-    //     }
-    // },[isSuccess, dispatch])
+    useEffect(()=>{
+        if(isSuccess){
+            dispatch(SetBookingModalOpen(false));
+            setPatientName("");
+            setPhone("");
+            setAge("");
+            setAddress("")
+        }
+    },[isSuccess, dispatch])
 
 
 
 
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     addTransaction({
-    //         amount,
-    //         type,
-    //         category,
-    //         date,
-    //         reference,
-    //         description
-    //     })
-    // }
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        createAppointment({
+            doctorId:doctorId,
+            patientName,
+            phone,
+            age,
+            address
+        })
+    }
 
 
     return (
         <>
-            <Modal title="Add New Transaction" open={modalOpen} onOk={handleOk}>
-                <form onSubmit={"handleSubmit"}>
+            <Modal title="Make Appointment" open={modalOpen} onOk={handleOk}>
+                <form onSubmit={handleSubmit}>
                     <div className="pt-2">
                         <label className="block pb-2" htmlFor="amount">
                             Patient Name

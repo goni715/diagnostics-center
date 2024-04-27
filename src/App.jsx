@@ -5,7 +5,6 @@ import ServicePage from "./pages/ServicePage.jsx";
 import DoctorsPage from "./pages/DoctorsPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import OnlineReportPage from "./pages/OnlineReportPage.jsx";
-import DoctorDetailsPage from "./pages/DoctorDetailsPage.jsx";
 import LoginPage from "./pages/Auth/LoginPage.jsx";
 import ForgotPasswordPage from "./pages/Auth/ForgotPasswordPage.jsx";
 import RegisterPage from "./pages/Auth/RegisterPage.jsx";
@@ -23,7 +22,6 @@ const App = () => {
                   <Route exact path="/about" element={<AboutPage/>}/>
                   <Route exact path="/services" element={<ServicePage/>}/>
                   <Route exact path="/doctors" element={<DoctorsPage/>}/>
-                  <Route exact path="/doctor-details" element={<DoctorDetailsPage/>}/>
                   <Route exact path="/contact" element={<ContactPage/>}/>
                   <Route exact path="/online-report" element={<OnlineReportPage/>}/>
                   <Route exact path="/login" element={<LoginPage/>}/>
