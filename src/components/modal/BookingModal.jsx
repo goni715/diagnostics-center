@@ -11,7 +11,8 @@ const BookingModal = () => {
     const dispatch = useDispatch();
     const modalOpen = useSelector((state)=>state.modal.bookingModalOpen);
     const [patientName, setPatientName] = useState("")
-    const [phone, setPhone] = useState("")
+    const [phone, setPhone] = useState("");
+    const [date, setDate] = useState("");
     const [age, setAge] = useState("")
     const [address, setAddress] = useState("")
     const [createAppointment, {isSuccess,isLoading}] = useCreateAppointmentMutation();
@@ -51,7 +52,8 @@ const BookingModal = () => {
             patientName,
             phone,
             age,
-            address
+            address,
+            appointmentDate: new Date(date)
         })
     }
 
@@ -78,10 +80,18 @@ const BookingModal = () => {
                     </div>
                     <div className="pt-2">
                         <label className="block pb-2" htmlFor="ref">
+                            Date
+                        </label>
+                        <input onChange={(e) => setDate(e.target.value)} value={date}
+                               className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="date"
+                               id="ref" required/>
+                    </div>
+                    <div className="pt-2">
+                        <label className="block pb-2" htmlFor="ref">
                             Age
                         </label>
                         <input onChange={(e) => setAge(e.target.value)} value={age}
-                               className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="number"
+                               className="w-full outline-none border border-gray-400 px-4 py-2 rounded-md" type="text"
                                id="ref" required/>
                     </div>
                     <div className="pt-2">
