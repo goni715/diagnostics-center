@@ -1,8 +1,3 @@
-import doctor_pic from "../../assets/images/doctor.jpg";
-import {Button} from "@material-tailwind/react";
-import {SetBookingModalOpen} from "../../redux/features/modal/modalSlice.js";
-
-
 const ListLoading = () => {
     const array = [1,2,3,4, 5,6,7,8];
     return (

@@ -1,4 +1,3 @@
-import pic from "../../assets/images/details.jpeg";
 import './details.css';
 
 const Details = () => {

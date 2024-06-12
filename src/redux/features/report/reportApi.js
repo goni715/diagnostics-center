@@ -1,23 +1,21 @@
 import {apiSlice} from "../api/apiSlice.js";
-import {SetContactSuccess} from "./contactSlice.js";
 
 
-export const contactApi = apiSlice.injectEndpoints({
+
+export const reportApi = apiSlice.injectEndpoints({
     endpoints: (builder) => ({
-        contactCreate: builder.mutation({
+        searchReport: builder.mutation({
             query: (data) => ({
-                url: "/contact/create-contact",
+                url: "/report/search-report",
                 method: "POST",
                 body: data
             }),
             async onQueryStarted(arg, {queryFulfilled, dispatch}){
                 try{
                     const res = await queryFulfilled;
-                    if(res?.data?.message === "success"){
-                        dispatch(SetContactSuccess(true));
-                    }
                 }catch(err) {
                     //ErrorToast("Something went wrong!")
+                    //console.log(err)
                 }
             }
         }),
@@ -25,4 +23,4 @@ export const contactApi = apiSlice.injectEndpoints({
 })
 
 
-export const {useContactCreateMutation} = contactApi;
+export const {useSearchReportMutation} = reportApi;

@@ -10,7 +10,7 @@ import {SetDoctorId} from "../../redux/features/doctor/doctorSlice.js";
 const DoctorListItem = ({doctor}) => {
     const navigate = useNavigate();
     const dispatch = useDispatch();
-    const {_id, name, email, phone, specialization, experience} = doctor || {};
+    const {_id, name, specialization, experience} = doctor || {};
 
 
     const handleClick = () => {

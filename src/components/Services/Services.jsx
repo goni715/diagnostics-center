@@ -16,7 +16,7 @@ const Services = () => {
 
             <div className="mb-32">
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <div className="lg:col-span-9">
+                    <div className="lg:col-span-7">
                         <h1 className="text-2xl font-bold">Health Checkups</h1>
                         <p className="text-gray-800 my-5">
                             We believe that preventive care is key to maintaining good health. Our comprehensive health
@@ -47,7 +47,7 @@ const Services = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="lg:col-span-3 h-auto">
+                    <div className="lg:col-span-5 h-auto">
                         <img src={service1} className="h-full" alt=""/>
                     </div>
                 </div>
@@ -56,10 +56,10 @@ const Services = () => {
             {/*Ultrasonography service*/}
             <div className="mb-32">
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <div className="lg:col-span-3 h-auto">
+                    <div className="lg:col-span-5 h-auto">
                         <img src={service2} className="h-full" alt=""/>
                     </div>
-                    <div className="lg:col-span-9">
+                    <div className="lg:col-span-7">
                         <h1 className="text-2xl font-bold">Ultrasonography Services</h1>
                         <p className="text-gray-800 my-5">
                             we offer state-of-the-art ultrasonography services that provide clear and detailed images to
@@ -102,7 +102,7 @@ const Services = () => {
             {/*Pathology Service*/}
             <div className="mb-32">
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <div className="lg:col-span-9">
+                    <div className="lg:col-span-7">
                         <h1 className="text-2xl font-bold">Pathology Services</h1>
                         <p className="text-gray-800 my-5">
                             Our pathology services play a critical role in accurate diagnosis and healthcare decision-making. Led by experienced pathologists and equipped with advanced technology, our pathology department is dedicated to delivering precise insights into your health.
@@ -127,7 +127,7 @@ const Services = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="lg:col-span-3 h-auto">
+                    <div className="lg:col-span-5 h-auto">
                         <img src={service3} className="h-full" alt=""/>
                     </div>
                 </div>
@@ -136,10 +136,10 @@ const Services = () => {
             {/*Biochemistry service*/}
             <div className="mb-32">
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <div className="lg:col-span-3 h-auto">
+                    <div className="lg:col-span-5 h-auto">
                         <img src={service4} className="h-full" alt=""/>
                     </div>
-                    <div className="lg:col-span-9">
+                    <div className="lg:col-span-7">
                         <h1 className="text-2xl font-bold">Biochemistry Services</h1>
                         <p className="text-gray-800 my-5">
                             Our biochemistry services provide a deeper understanding of your body's biochemical processes. With cutting-edge technology and a team of experts, we aim to deliver accurate and insightful analyses that contribute to your overall health assessment.
@@ -173,7 +173,7 @@ const Services = () => {
             {/*Electrocardiogram (ECG) Services*/}
             <div className="mb-32">
                 <div className="container grid grid-cols-1 lg:grid-cols-12 gap-12">
-                    <div className="lg:col-span-9">
+                    <div className="lg:col-span-7">
                         <h1 className="text-2xl font-bold">Electrocardiogram (ECG) Services</h1>
                         <p className="text-gray-800 mt-5">
                             Our advanced Electrocardiogram (ECG) services provide crucial insights into your heart's
@@ -200,7 +200,7 @@ const Services = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className="lg:col-span-3 h-auto">
+                    <div className="lg:col-span-5 h-auto">
                         <img src={service5} className="h-full" alt=""/>
                     </div>
                 </div>

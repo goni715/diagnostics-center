@@ -9,7 +9,7 @@ const Hero = () => {
                 <div className="w-full h-full bg-[rgba(0,0,0,0.6)]">
                     <div className="container text-white py-14 md:py-32 space-y-8 lg:w-1/2">
                        <h1>TOTAL HEALTH CARE SOLUTION</h1>
-                        <h1 className="text-5xl font-bold">
+                        <h1 className="text-6xl font-bold">
                             Your Most Trusted
                             Health Partner in Kawkhali
                         </h1>

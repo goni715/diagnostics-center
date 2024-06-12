@@ -17,7 +17,7 @@ const BookingModal = () => {
     const [address, setAddress] = useState("")
     const [createAppointment, {isSuccess,isLoading}] = useCreateAppointmentMutation();
     const {doctorId} = useSelector(state=>state.doctor);
-
+   
 
 
 
