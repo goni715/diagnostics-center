@@ -1,4 +1,5 @@
 import {apiSlice} from "../api/apiSlice.js";
+import {ErrorToast} from "../../../helper/ValidationHelper.js";
 
 
 
@@ -14,7 +15,10 @@ export const reportApi = apiSlice.injectEndpoints({
                 try{
                     const res = await queryFulfilled;
                 }catch(err) {
-                    //ErrorToast("Something went wrong!")
+                    let status = err?.error?.status;
+                    if(status === 404){
+                        ErrorToast("Couldn't find Invoice Number or Phone Number");
+                    }
                     //console.log(err)
                 }
             }
