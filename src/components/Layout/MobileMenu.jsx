@@ -1,5 +1,6 @@
 import {FaUserCircle} from "react-icons/fa";
 import {Link, useLocation} from "react-router-dom";
+import {getToken, logout} from "../../helper/SessionHelper.js";
 const NavLinks = [
     {
         id: 1,
@@ -48,13 +49,30 @@ const MobileMenu = ({showMenu}) => {
                     <nav className="nav-items mt-12">
                         <ul className="flex flex-col space-y-4 text-xl">
                             {
-                                NavLinks.map((item,i)=>{
+                                NavLinks.map((item, i) => {
                                     return (
-                                        <Link key={i.toString()} to={item.link} className={`cursor-pointer pl-3 hover:bg-light-white transition-colors rounded duration-500 ${path=== item.link && "bg-light-white"}`}>
+                                        <Link key={i.toString()} to={item.link}
+                                              className={`cursor-pointer pl-3 hover:bg-light-white transition-colors rounded duration-500 ${path === item.link && "bg-light-white"}`}>
                                             {item.name}
                                         </Link>
                                     )
                                 })
+                            }
+
+
+                            {getToken() ? (
+                                <>
+                                    <li onClick={()=>logout()}className={`cursor-pointer pl-3 hover:bg-light-white transition-colors rounded duration-500`}>
+                                        Logout
+                                    </li>
+                                </>
+                            ): (
+                                <>
+                                    <Link to="/login"  className={`cursor-pointer pl-3 hover:bg-light-white transition-colors rounded duration-500 ${path === "/login" && "bg-light-white"}`}>
+                                        Login
+                                    </Link>
+                                </>
+                            )
                             }
 
                         </ul>

@@ -60,7 +60,7 @@ const Register = () => {
                     <form onSubmit={handleSubmit(onSubmit)}
                           className="py-4 grid grid-cols-1 w-[100%] md:grid-cols-2 gap-6">
 
-                        <div className="w-full">
+                        <div className="w-full col-span-2 md:col-span-1">
                             <Input
                                 className="w-full"
                                 size="lg"
@@ -77,7 +77,7 @@ const Register = () => {
                                 <span className="error-text">{errors?.firstName?.message}</span>
                             )}
                         </div>
-                        <div className="w-full">
+                        <div className="w-full col-span-2 md:col-span-1">
                             <Input
                                 className="w-full"
                                 size="lg"
@@ -94,7 +94,7 @@ const Register = () => {
                                 <span className="error-text">{errors?.lastName?.message}</span>
                             )}
                         </div>
-                        <div className="md:col-span-2">
+                        <div className="col-span-2">
                             <Input
                                 size="lg"
                                 type="email"
@@ -115,7 +115,7 @@ const Register = () => {
                         </div>
 
 
-                        <div>
+                        <div className="w-full col-span-2 md:col-span-1">
                             <Input
                                 size="lg"
                                 label="Password"
@@ -143,7 +143,7 @@ const Register = () => {
                                 <span className="error-text">{errors?.password?.message}</span>
                             )}
                         </div>
-                        <div>
+                        <div className="w-full col-span-2 md:col-span-1">
                             <Input
                                 size="lg"
                                 type="password"
@@ -166,7 +166,7 @@ const Register = () => {
                                 <span className="error-text">{errors?.confirmPass?.message}</span>
                             )}
                         </div>
-                        <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div className="col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <Button type="reset" variant="outlined">Reset</Button>
                             {/*<Button type="submit">Create Account</Button>*/}
                             <Button disabled={isLoading}
